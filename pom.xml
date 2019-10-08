@@ -2,14 +2,15 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.qingfei</groupId>
   <artifactId>kafka-demo</artifactId>
-  <version>1.0</version>
+  <version>1.1-SNAPSHOT</version>
 
   <properties>
     <scm.trunk.url>git@github.com:qingfei1994/kafka-demo.git</scm.trunk.url>
   </properties>
   <scm>
-    <developerConnection>scm:git:${scm.trunk.url}</developerConnection>
-    <url>scm:git:${scm.trunk.url}</url>
+    <developerConnection>scm:git:git@github.com:qingfei1994/kafka-demo.git</developerConnection>
+    <url>scm:git:git@github.com:qingfei1994/kafka-demo.git</url>
+    <tag>HEAD</tag>
   </scm>
   <dependencies>
 
