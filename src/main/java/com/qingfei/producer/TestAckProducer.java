@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Properties;
 
 
-/**测试ACK参数的三个值所造成的性能差异
+/**Test ack properties
  * Created by ASUS on 5/9/2018.
  */
 public class TestAckProducer  {

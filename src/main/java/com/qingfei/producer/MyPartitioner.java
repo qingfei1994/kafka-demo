@@ -25,7 +25,6 @@ public class MyPartitioner implements Partitioner {
         List<PartitionInfo> partitions = cluster.availablePartitionsForTopic(topic);
         int numPartitions = partitions.size();
         System.out.println("numPartitions:"+numPartitions);
-        //不允许record的key值为null
         if (keyBytes==null) {
             throw new InvalidRecordException("key can not be null");
         }

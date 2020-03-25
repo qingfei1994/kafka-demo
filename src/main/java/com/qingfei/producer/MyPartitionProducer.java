@@ -20,6 +20,7 @@ public class MyPartitionProducer {
         kafkaProperty.put("partitioner.class","com.qingfei.producer.MyPartitioner");
         KafkaProducer<String,String> producer = new KafkaProducer<String, String>(kafkaProperty);
         //ProducerRecord<String,String> record = new ProducerRecord<String, String>("hello",null,"hello kafka partition");
+
         ProducerRecord<String,String> record = new ProducerRecord<String, String>("hello","1","hello kafka partition");
         producer.send(record, new Callback() {
             public void onCompletion(RecordMetadata recordMetadata, Exception e) {

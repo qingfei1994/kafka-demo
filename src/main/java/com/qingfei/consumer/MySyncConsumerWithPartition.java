@@ -27,15 +27,15 @@ public class MySyncConsumerWithPartition {
         try {
             while (true) {
                 ConsumerRecords<String,byte[]> consumerRecords = consumer.poll(100);
-                //遍历每个partition
+                //iterate thru each partition
                 for (TopicPartition partition:consumerRecords.partitions()) {
-                    //获取指定partition的消息记录
+                    //get message from specific partition
                     List<ConsumerRecord<String,byte[]>> records = consumerRecords.records(partition);
-                    //遍历指定partition中的消息记录
+                    //iterate thru specific partition
                     for(ConsumerRecord record:records){
                         System.out.println("consumer consume message:partition"+record.partition()+",offset="+record.offset()+",key="+record.key()+",value="+record.value());
                     }
-                    //获取partition的最后一个offset
+                    //get the latest offset of the partition
                     long lastOffset = records.get(records.size()-1).offset();
                     consumer.commitSync(Collections.singletonMap(partition,new OffsetAndMetadata(lastOffset)));
                 }

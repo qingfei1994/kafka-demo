@@ -27,6 +27,7 @@ public class MyFirstConsumer {
                     System.out.println("MyFirstConsumer's consumption message:partition"+record.partition()+",offset:"+record.offset()+",key="+record.key()+",value="+record.value());
 
                 }
+
             }
         } catch (Exception e) {
             e.printStackTrace();

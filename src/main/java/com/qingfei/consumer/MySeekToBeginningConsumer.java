@@ -18,7 +18,6 @@ public class MySeekToBeginningConsumer {
         prop.put("group.id", "group1");
         prop.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         prop.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
-        //第一个参数是topic name,第二个参数是partition
         TopicPartition seekToBegin = new TopicPartition("haiqingchen",1);
         KafkaConsumer<String,byte[]> consumer = new KafkaConsumer<String, byte[]>(prop);
         consumer.assign(Arrays.asList(seekToBegin));
